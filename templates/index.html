@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron text-center">
+                <h1>Mission to Mars</h1>
+                <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Lastest Mars News</h2>
+                <h3>{{mars.news_title}}</h3>
+                <p><small>{{mars.news_paragraph}}</small></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Featured Mars Image</h2>
+                        <img class="card-img" src="{{mars.featured_img}}">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> Current Weather On Mars</h4>
+                        <p class="card-text">{{mars.mars_weather}}</p>
+                    </div>
+                </div>
+                <!-- {{mars.fact_table}} -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" id="main-vis">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- <img class="card-img-top" src="{{mars.hem_imgs[1]['img_url']}}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top" src="{{mars.hem_imgs[0]['img_url']}}">
+                    </div>
+                </div>
+            </div> -->
+                
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="row">
+                                <img class="card-img-top" src="{{mars.hem_imgs[0]['img_url']}}">
+                                <img class="card-img-top" src="{{mars.hem_imgs[1]['img_url']}}" >
+                            </div>
+                            <div class="row">
+                                <img class="card-img-top" src="{{mars.hem_imgs[2]['img_url']}}">
+                                <img class="card-img-top" src="{{mars.hem_imgs[3]['img_url']}}">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

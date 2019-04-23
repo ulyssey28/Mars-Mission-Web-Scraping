@@ -1,0 +1,25 @@
+
+
+#featured-image {
+height: 200px;
+width: 100px;
+}
+
+.body{
+    background-color: gold;
+}
+.container{
+    background-color: gold;
+
+}
+
+
+.card-body{
+    max-width: 400px;
+    max-height: 350px;
+}
+.card-img-top{
+    max-width: 202px;
+    max-height: 150px;
+}
+
