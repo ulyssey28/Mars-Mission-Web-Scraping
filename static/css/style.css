@@ -1,3 +1,8 @@
+.main-head {
+    font-size: 75px;
+}
+
+
 .card {
     padding: 5px;
 }
@@ -5,3 +10,8 @@
 .card .card-text {
      font-weight: bold;
 }
+
+.jumbotron {
+    margin-bottom: 50px;
+}
+
