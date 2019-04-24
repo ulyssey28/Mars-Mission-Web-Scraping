@@ -23,6 +23,7 @@
     padding: 0px;
 }
 
+
 .featured-title {
     color: white
 }
@@ -53,6 +54,14 @@ h3 {
 
 h4 {
     font-weight: bold;
+}
+
+.top-space {
+    margin: 100px;
+}
+.head-card {
+    padding: 0;
+    margin-bottom: 0;
 }
 
 body {
