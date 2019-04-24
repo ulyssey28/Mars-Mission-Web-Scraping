@@ -44,6 +44,9 @@
     margin-top: 0;
 }
 
+h1{
+    color: red
+}
 h2 {
     font-weight: bold;
 }
@@ -69,4 +72,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+  }
+
+
+  
+.weather{
+    background-image: url("../img/NASA_logo.jpg");
+    background-position: center;
   }
