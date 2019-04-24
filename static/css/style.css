@@ -23,6 +23,18 @@
     padding: 0px;
 }
 
+.featured-title {
+    color: white
+}
+
+.hem-title {
+    color: white
+}
+
+.facts-title{
+    color: white 
+}
+
 .container {
     font-family: sans-serif;
 }
@@ -42,3 +54,10 @@ h3 {
 h4 {
     font-weight: bold;
 }
+
+body {
+    background-image: url("https://www.jpl.nasa.gov/spaceimages/images/wallpaper/PIA23121-1600x1200.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
