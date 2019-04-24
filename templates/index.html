@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-8">
                 <h2>Featured Mars Image</h2>
-                <div class="card featured-img">
+                <div class="card shadow-lg featured-img">
                     <img clas="card-img-top" src="{{mars.featured_img}}" />
                 </div>
             </div>
@@ -34,7 +34,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body shadow-lg">
                                 <h4>Current Weather on Mars</h4>
                                 <p class="card-text">{{mars.mars_weather}}</p>
                             </div>
@@ -44,7 +44,8 @@
                 <br>
                 <div class="row">
                     <div class="col">
-                        <div class="card">
+                        <h3>Mars Facts</h3>
+                        <div class="card shadow-lg">
                             {{ mars.fact_table|safe }}
                         </div>
                     </div>
@@ -57,8 +58,8 @@
         <div class="row">
             <div class="col">
                 <!-- first card -->
-                <div class="card">
-                    <img class="card-img-top" src="{{mars.hem_imgs[0]['img_url']}}" alt="flowers in bloom" style="float: right">
+                <div class="card shadow-lg">
+                    <img class="card-img-top" src="{{mars.hem_imgs[0]['img_url']}}" alt="Cerberus Hemisphere Enhanced" style="float: right">
                     <div class="card-body">
                         <p class=" card-text">
                         Cerberus Hemisphere Enhanced
@@ -69,8 +70,8 @@
         
             <div class="col">
                 <!-- second card -->
-                <div class="card h-100">
-                    <img class="card-img-top" src="{{mars.hem_imgs[1]['img_url']}}" alt="tropical flowers">
+                <div class="card shadow-lg">
+                    <img class="card-img-top" src="{{mars.hem_imgs[1]['img_url']}}" alt="Schiaparelli Hemisphere Enhanced">
                     <div class="card-body">
                         <p class=" card-text">
                         Schiaparelli Hemisphere Enhanced
@@ -84,8 +85,8 @@
         <div class="row">
             <div class="col">
                 <!-- third card -->
-                <div class="card">
-                    <img class="card-img-top" src="{{mars.hem_imgs[2]['img_url']}}" alt="flowers in bloom" style="float: right">
+                <div class="card shadow-lg">
+                    <img class="card-img-top" src="{{mars.hem_imgs[2]['img_url']}}" alt="Syrtis Major Hemisphere Enhanced" style="float: right">
                     <div class="card-body">
                         <p class="card-text">
                         Syrtis Major Hemisphere Enhanced
@@ -95,8 +96,8 @@
             </div>
             <div class="col">
                 <!-- fourth card -->
-                <div class="card h-100">
-                    <img class="card-img-top" src="{{mars.hem_imgs[3]['img_url']}}" alt="tropical flowers">
+                <div class="card shadow-lg">
+                    <img class="card-img-top" src="{{mars.hem_imgs[3]['img_url']}}" alt="Valles Marineris Hemisphere Enhanced">
                     <div class="card-body">
                         <p class=" card-text">
                         Valles Marineris Hemisphere Enhanced
