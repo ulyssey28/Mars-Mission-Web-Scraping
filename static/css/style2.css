@@ -2,7 +2,6 @@
     font-size: 75px;
 }
 
-
 .card {
     padding: 5px;
 }
@@ -25,15 +24,18 @@
 
 
 .featured-title {
-    color: white
+    text-shadow: 1px 1px 2px black, 0 0 0em black;
+    color: white;
 }
 
 .hem-title {
-    color: white
+    text-shadow: 1px 1px 2px black, 0 0 0em black;
+    color: white;
 }
 
 .facts-title{
-    color: white 
+    text-shadow: 1px 1px 2px black, 0 0 0em black;
+    color: white;
 }
 
 .container {
@@ -45,8 +47,13 @@
 }
 
 h1{
-    color: lightblue
+    /* color:lightskyblue;
+    text-shadow: 0px 1px 2px white, 0 0 1em white; */
+    font-size: 75px;
+    text-shadow: 1px 1px 2px black, 0 0 0em black;
+    color: white;
 }
+
 h2 {
     font-weight: bold;
 }
@@ -65,7 +72,6 @@ h4 {
 .head-card {
     padding: 0;
     margin-bottom: 0;
-    text-shadow: 1px 1px 2px black, 0 0 0em black;
 }
 
 body {
@@ -75,16 +81,35 @@ body {
     background-attachment: fixed;
   }
 
-
-  
 .nasa-logo {
     background-image: url("../img/NASA_logo.jpg");
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-position: center;
   }
 
-.weather {
-    /* text-shadow: 1px 1px 2px black, 0 0 1em black; */
+/* .weather{
+    text-shadow: 1px 1px 2px black, 0 0 1em black;
+    text-shadow: 1px 1px 2px grey, 0 0 0em white;
+    color: black;
+} */
+
+
+
+.weather-title{
     text-shadow: 1px 1px 2px black, 0 0 0em black;
-    color: lightblue;
+    color: white;
 }
+
+.latest-title{
+    text-shadow: 1px 1px 2px black, 0 0 0em black;
+    color: white;
+}
+
+
+tr:nth-child(odd)		{ background-color:#eee; }
+tr:nth-child(even)	{ background-color:#fff; }
+
+tr:hover  { background-color: #ffff99;}
+
+
+<div class="jumbotron nasa-logo head-card text-center">

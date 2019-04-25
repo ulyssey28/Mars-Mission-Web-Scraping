@@ -15,7 +15,7 @@
             <div class="col">
                 <div class="card shadow-lg">       
                     <div class="jumbotron nasa-logo head-card text-center">
-                        <h1 class="main-head">Mission To Mars</h1>
+                        <h1 class="main-head">Mars Mission</h1>
                         <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
                     </div>
                 </div>
@@ -24,11 +24,10 @@
         <br>
         <div class="row">
             <div class="col">
+                <h2 class="latest-title">Latest Mars News</h2>
                 <div class="card shadow-lg">
                     <div class="card-body shadow-lg">                 
-                        <h3>Latest Mars News</h3>
-                        <hr>
-                        <h4>NASA's Next Mars Mission to Investigate Interior of Red Planet</h4>
+                        <h3>NASA's Next Mars Mission to Investigate Interior of Red Planet</h3>
                         <p class="news-text"><small>Preparation of NASA's next spacecraft to Mars, Insight has ramped up this summer , on course for launch next May from Vandering Air Force Base in cerntral Califronia -- the first  interplantery launch in history from America's West Coast</small></p>
                     </div>
                 </div>
@@ -39,16 +38,15 @@
             <div class="col-8">
                 <h2 class="featured-title">Featured Mars Image</h2>
                 <div class="card shadow-lg featured-img">
-                    <img clas="card-img-top" src="https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA16567_hires.jpg" />
+                    <img clas="card-img-top shadow-lg" src="https://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA22567_ip.jpg" />
                 </div>
             </div>
             <div class="col-4">
                 <div class="row">
                     <div class="col">
-                        <div class="card weather nasa-logo shadow-lg">
+                        <h3 class="weather-title">Current Weather on Mars</h3>
+                        <div class="card weather shadow-lg">
                             <div class="card-body shadow-lg">
-                                <h4>Current Weather on Mars</h4>
-                                <hr>
                                 <p class="card-text">InSight sol 141 (2019-04-20) low -98.3ºC (-144.9ºF) high -19.7ºC (-3.5ºF)
                                         winds from the SW at 4.7 m/s (10.6 mph) gusting to 12.9 m/s (28.8 mph)
                                         pressure at 7.40 hPa</p>
@@ -61,13 +59,64 @@
                     <div class="col">
                         <h3 class="facts-title">Mars Facts</h3>
                         <div class="card shadow-lg">
-                            {{ mars.fact_table|safe }}
+                            <table border="1" class="dataframe">
+                                <thead>
+                                    <tr style="text-align: right;">
+                                        <th></th>
+                                        <th>Values</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Equatorial Diameter:</th>
+                                        <td>6,792 km</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Polar Diameter:</th>
+                                        <td>6,752 km</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Mass:</th>
+                                        <td>6.42 x 10^23 kg (10.7% Earth)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Moons:</th>
+                                        <td>2 (Phobos &amp; Deimos)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Orbit Distance:</th>
+                                        <td>227,943,824 km (1.52 AU)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Orbit Period:</th>
+                                        <td>687 days (1.9 years)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Surface Temperature:</th>
+                                        <td>-153 to 20 °C</td>
+                                    </tr>
+                                    <tr>
+                                        <th>First Record:</th>
+                                        <td>2nd millennium BC</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Recorded By:</th>
+                                        <td>Egyptian astronomers</td>
+                                    </tr>
+                                </tbody>
+                                </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <br>
+        <br>
+        <hr>
         <h2 class="hem-title text-center">Mars Hemispheres</h2>
         <hr>
         <div class="row">
@@ -82,7 +131,6 @@
                     </div>
                 </div>
             </div>
-        
             <div class="col">
                 <!-- second card -->
                 <div class="card shadow-lg">
