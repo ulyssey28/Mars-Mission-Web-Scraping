@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div class="container">         
@@ -15,7 +15,7 @@
             <div class="col">
                 <div class="card shadow-lg">       
                     <div class="jumbotron nasa-logo head-card text-center">
-                        <h1 class="main-head">Mission To Mars</h1>
+                        <h1 class="main-head">Mission to Mars</h1>
                         <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
             <div class="col-4">
                 <div class="row">
                     <div class="col">
-                        <div class="card weather nasa-logo shadow-lg">
+                        <div class="card weather shadow-lg">
                             <div class="card-body shadow-lg">
                                 <h4>Current Weather on Mars</h4>
                                 <hr>
@@ -66,6 +66,8 @@
             </div>
         </div>
         <br>
+        <br>
+        <hr>
         <h2 class="hem-title text-center">Mars Hemispheres</h2>
         <hr>
         <div class="row">

@@ -2,7 +2,6 @@
     font-size: 75px;
 }
 
-
 .card {
     padding: 5px;
 }
@@ -25,15 +24,18 @@
 
 
 .featured-title {
-    color: white
+    text-shadow: 1px 1px 2px black, 0 0 0em black;
+    color: lightblue;
 }
 
 .hem-title {
-    color: white
+    text-shadow: 1px 1px 2px black, 0 0 0em black;
+    color: lightblue;
 }
 
 .facts-title{
-    color: white 
+    text-shadow: 1px 1px 2px black, 0 0 0em black;
+    color: lightblue;
 }
 
 .container {
@@ -75,8 +77,6 @@ body {
     background-attachment: fixed;
   }
 
-
-  
 .nasa-logo {
     background-image: url("../img/NASA_logo.jpg");
     background-repeat: no-repeat;

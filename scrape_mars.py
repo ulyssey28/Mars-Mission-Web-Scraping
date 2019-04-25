@@ -52,13 +52,7 @@ def scrape():
     # to a largesize image
     # The current string is: (/spaceimages/images/mediumsize/PIA17357_ip.jpg)
 
-    # Replace the me
-    large_img = featured_img_link.replace("mediumsize", "largesize")
-
-    # Replace the _ip with _hires to set correct path to largesize image 
-    large_img = large_img.replace("_ip", "_hires")
-
-    lg_featured_img_url = "https://www.jpl.nasa.gov" + large_img
+    lg_featured_img_url = "https://www.jpl.nasa.gov" + featured_img_link
 
 ##########################################################################################################################################################
 # Mars Weather (Twitter)
