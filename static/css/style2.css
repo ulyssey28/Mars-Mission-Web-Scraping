@@ -104,12 +104,16 @@ body {
     text-shadow: 1px 1px 2px black, 0 0 0em black;
     color: white;
 }
+ .facts {
+    border-color: white;
+    border: solid;
+    color: white;
+ }
 
+ th, td {
+    border-bottom: 2px solid white;
+  }
+tr:nth-child(odd)		{ background-color: lightgray; }
+tr:nth-child(even)	{ background-color: darkslategray; }
 
-tr:nth-child(odd)		{ background-color:#eee; }
-tr:nth-child(even)	{ background-color:#fff; }
-
-tr:hover  { background-color: #ffff99;}
-
-
-<div class="jumbotron nasa-logo head-card text-center">
+tr:hover  { background-color: gray;}
