@@ -30,6 +30,9 @@ def scrape():
     news_title_tag =  soup.find("div", class_="content_title")
     news_title = news_title_tag.text
 
+    news_path = news_title_tag.a["href"]
+    news_link = "https://mars.nasa.gov"+ news_path
+
     news_paragraph_tag = soup.find("div", class_="article_teaser_body")
     news_paragraph = news_paragraph_tag.text
 ##########################################################################################################################################################
@@ -164,7 +167,7 @@ def scrape():
             print("Scraping Complete")
 
 
-    lastest_dict = {"news_title": news_title, "news_paragraph": news_paragraph, "featured_img": lg_featured_img_url, "mars_weather" : mars_weather, "fact_table": facts_html, "hem_imgs": hemisphere_image_info}
+    lastest_dict = {"news_link": news_link, "news_title": news_title, "news_paragraph": news_paragraph, "featured_img": lg_featured_img_url, "mars_weather" : mars_weather, "fact_table": facts_html, "hem_imgs": hemisphere_image_info}
 
     return lastest_dict
 

@@ -7,7 +7,7 @@
 }
 
 .card .card-text {
-     font-weight: bold;
+    font-weight: bold;
 }
 
 .jumbotron {
@@ -44,6 +44,7 @@
 
 .news-text {
     margin-top: 0;
+    font-weight: bold;x
 }
 
 h1{
@@ -87,11 +88,9 @@ body {
     background-position: center;
   }
 
-/* .weather{
-    text-shadow: 1px 1px 2px black, 0 0 1em black;
-    text-shadow: 1px 1px 2px grey, 0 0 0em white;
-    color: black;
-} */
+.weather{
+    padding: 0px;
+}
 
 
 
@@ -111,7 +110,7 @@ body {
  }
 
  th, td {
-    border-bottom: 2px solid white;
+    border: 2px solid white;
   }
 tr:nth-child(odd)		{ background-color: gray; }
 tr:nth-child(even)	{ background-color: darkslategray; }
