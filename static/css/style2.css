@@ -83,7 +83,7 @@ body {
 
 .nasa-logo {
     background-image: url("../img/NASA_logo.jpg");
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     background-position: center;
   }
 
@@ -113,7 +113,7 @@ body {
  th, td {
     border-bottom: 2px solid white;
   }
-tr:nth-child(odd)		{ background-color: lightgray; }
+tr:nth-child(odd)		{ background-color: gray; }
 tr:nth-child(even)	{ background-color: darkslategray; }
 
-tr:hover  { background-color: gray;}
+tr:hover  { background-color: lightgray;}
