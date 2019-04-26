@@ -1,7 +1,12 @@
 # Mars-Mission-Web-Scraping
 A web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. 
 
-To run this scraping code yourself, download this repository and run `app.py`. 
+To run this scraping code yourself, download this repository and run `app.py` in terminal.
+
+Note: this code requires MongoDB to Scrape and store the data. 
+
+To view an example of the rendered template without running the scrape code, reference the `test.html` contained in the templates folder. 
+
 Explanations of the code can be found within each script. 
 
 ## Step 1 - Scraping
