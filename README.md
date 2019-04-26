@@ -3,9 +3,9 @@ A web application that scrapes various websites for data related to the Mission 
 
 To run this scraping code yourself, download this repository and run `app.py` in terminal.
 
-Note: this code requires MongoDB to Scrape and store the data. 
+Note: this code requires MongoDB to scrape and store the data. 
 
-To view an example of the rendered template without running the scrape code, reference the `test.html` contained in the templates folder. 
+To view an example of the rendered template without running the scrape code, open the `test.html` file (contained in the templates folder) in Google Chrome. 
 
 Explanations of the code can be found within each script. 
 
