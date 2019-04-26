@@ -72,7 +72,7 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
 
 ### Process
 
-* Create Python script called `scrape_mars.py` with a function called `scrape` that will execute all of your scraping code from above and return one Python dictionary containing all of the scraped data.
+* Create Python script called `scrape_mars.py` with a function called `scrape` that will execute all of the scraping code from above and return one Python dictionary containing all of the scraped data.
 
 * Next, create a route called `/scrape` that will import the `scrape_mars.py` script and call the `scrape` function.
 
