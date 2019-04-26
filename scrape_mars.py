@@ -17,10 +17,14 @@ def scrape():
 ##########################################################################################################################################################
      # URL of NASA page to be scraped
     url = 'https://mars.nasa.gov/news/'
+
+    # using the .visit() method tell the browser to visit the url
     browser.visit(url)
 
+    #sleep code to allow browser page to load
     time.sleep(5)
 
+    #obtain the page html using the .html attribute of the browser object
     html = browser.html
     # Create BeautifulSoup object; parse with 'html.parser'
     soup = BeautifulSoup(html, 'html.parser')
@@ -30,6 +34,7 @@ def scrape():
     news_title_tag =  soup.find("div", class_="content_title")
     news_title = news_title_tag.text
 
+    #Collect full news article link
     news_path = news_title_tag.a["href"]
     news_link = "https://mars.nasa.gov"+ news_path
 
@@ -40,21 +45,26 @@ def scrape():
 ##########################################################################################################################################################
     #Scrape latest featured image from Mars from NASA website
     img_url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
+
+    # using the .visit() method tell the browser to visit the url
     browser.visit(img_url)
 
+    #sleep code to allow browser page to load
     time.sleep(5)
+
+    #obtain the page html using the .html attribute of the browser object
     featured_img_html = browser.html
 
+    # Create BeautifulSoup object; parse with 'html.parser'
     img_soup = BeautifulSoup(featured_img_html, 'html.parser')
 
     #Find the <a> tag with id "full_image".. which contains a link to the featured image
     a_tag = img_soup.find("a", id="full_image")
     featured_img_link = a_tag["data-fancybox-href"]
 
-    # Note the featured image "href link" refers to a medium sized image. Using string minipulation we can create a url path 
-    # to a largesize image
     # The current string is: (/spaceimages/images/mediumsize/PIA17357_ip.jpg)
 
+    # Create a variable called lg_featured_img_url which holds the full path to the image
     lg_featured_img_url = "https://www.jpl.nasa.gov" + featured_img_link
 
 ##########################################################################################################################################################
@@ -62,12 +72,17 @@ def scrape():
 ##########################################################################################################################################################
     #Scrape the latest Mars weather tweet from Mars Weather page
     twitter_url = "https://twitter.com/marswxreport?lang=en"
+
+    # using the .visit() method tell the browser to visit the url
     browser.visit(twitter_url)
 
-
+    #sleep code to allow browser page to load
     time.sleep(5)
+
+    #obtain the page html using the .html attribute of the browser object
     twitter_html = browser.html
 
+    # Create BeautifulSoup object; parse with 'html.parser'
     twitter_soup = BeautifulSoup(twitter_html, 'html.parser')
 
     # Examine twitter page html using inspector and find the div class which refers to the container for each tweet
@@ -84,13 +99,19 @@ def scrape():
     # Use the read_html function in Pandas to automatically scrape any tabular data from a page.
     Marsfact_url = "https://space-facts.com/mars/"
 
+    # Using the pandas .read_html() method, we can convert the html tables found the page to pandas dataframes.
+    # Note the result of the .read_html() method is a list of dataframes pulled from the page.. In this case there is only one table
     url_tables = pd.read_html(Marsfact_url, encoding= "utf-8")
+
+    # Reference the first element of our list of dataframes
     mars_facts_df = url_tables[0]
 
+    # Rename Columns and set index
     mars_facts_df = mars_facts_df.rename(columns={0: "Description"})
     mars_facts_df = mars_facts_df.rename(columns={1: "Values"})
     mars_facts_df = mars_facts_df.set_index("Description")
 
+    # Remove newline symbols and set html equal to the variable facts_html
     facts_html = mars_facts_df.to_html().replace('\n', '')
 
 ##########################################################################################################################################################
@@ -99,10 +120,13 @@ def scrape():
     # Obtain high resolution images for each of Mar's hemispheres.
     hem_imgs_url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
 
+    # using the .visit() method tell the browser to visit the url
     browser.visit(hem_imgs_url)
 
+    #sleep code to allow browser page to load
     time.sleep(5)
 
+    #obtain the page html using the .html attribute of the browser object
     hem_html = browser.html
     # Create BeautifulSoup object; parse with 'html.parser'
     hem_soup = BeautifulSoup(hem_html, 'html.parser')
@@ -146,6 +170,8 @@ def scrape():
 
     for div in soup_div_list:
         browser.visit(hem_imgs_url)
+
+        #sleep code to allow browser page to load
         time.sleep(10)
         hem_title = div.find("h3").text
         try:
