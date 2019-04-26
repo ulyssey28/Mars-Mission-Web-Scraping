@@ -1,6 +1,9 @@
 # Mars-Mission-Web-Scraping
 A web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. 
 
+To run this scraping code yourself, download this repository and run `app.py`. 
+Explanations of the code can be found within each script. 
+
 ## Step 1 - Scraping
 
 ### NASA Mars News
