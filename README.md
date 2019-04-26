@@ -10,7 +10,7 @@ Explanations of the code can be found within each script.
 
 * Scraped the [NASA Mars News Site](https://mars.nasa.gov/news/) and collected the latest News Title and Paragraph Text. 
 
-* Assign the text to variables for later reference.
+* Assigned the text to variables for later reference.
 
 ```python
 # Example:
