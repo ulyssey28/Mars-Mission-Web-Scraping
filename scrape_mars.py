@@ -67,6 +67,34 @@ def scrape():
     # Create a variable called lg_featured_img_url which holds the full path to the image
     lg_featured_img_url = "https://www.jpl.nasa.gov" + featured_img_link
 
+    # Instruct the browser to click the text connected to our a_tag by using the browser .click_link_by_partial_text() method
+    # Note this takes us to a pop-up screen where we can find a link to a full article on the image
+    browser.click_link_by_partial_text(a_tag.text.strip())
+
+    # sleep to allow browser time to load
+    time.sleep(3)
+
+    browser.click_link_by_partial_text("more info")
+
+    time.sleep(3)
+    # Grab the html of the image article page
+    featured_info_html = browser.html
+
+    # Create a Beautiful soup object using the parsed html
+    featured_info_soup = BeautifulSoup(featured_info_html, 'html.parser')
+
+    # Find the "h1" tag with the class article_title which contains the title of the image
+    h1_article_title_tag = featured_info_soup.find("h1", class_="article_title")
+
+    # Assign the title text to the variable featured_des
+    featured_des = h1_article_title_tag.text.strip()
+
+    # Find the "div" that contains the page paragraph content
+    paragraphs_div = featured_info_soup.find("div", class_="wysiwyg_content")
+
+
+    featured_text = paragraphs_div.p.text.strip()
+
 ##########################################################################################################################################################
 # Mars Weather (Twitter)
 ##########################################################################################################################################################
@@ -193,7 +221,7 @@ def scrape():
             print("Scraping Complete")
 
 
-    lastest_dict = {"news_link": news_link, "news_title": news_title, "news_paragraph": news_paragraph, "featured_img": lg_featured_img_url, "mars_weather" : mars_weather, "fact_table": facts_html, "hem_imgs": hemisphere_image_info}
+    lastest_dict = {"news_link": news_link, "news_title": news_title, "news_paragraph": news_paragraph, "featured_img": lg_featured_img_url, "mars_weather" : mars_weather, "fact_table": facts_html, "hem_imgs": hemisphere_image_info, "featured_des": featured_des, "featured_text": featured_text}
 
     return lastest_dict
 
